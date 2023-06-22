@@ -79,6 +79,7 @@ export default class Map {
 	async highlight(area) {
 
 		const { offsetX, offsetY, height, width } = this.getPositionAndSize(area);
+		console.log(offsetX, offsetY, height, width)
 
 		let $hightlight = document.createElement('div');
 		$hightlight.classList.add('highlight');
@@ -149,6 +150,11 @@ export default class Map {
 			height = Math.abs(height);
 		}
 
+		if (width < 0) {
+			offsetY += width;
+			width = Math.abs(width);
+		}
+
 		return {
 			offsetX,
 			offsetY,
@@ -158,21 +164,21 @@ export default class Map {
 	}
 
 	/**
-	 * This method will retrieve the building data from the json file using id key
+	 * This method will retrieve the area data from the json file using id key
 	 * 
 	 * @param {string} id
 	 * @return {Promise<{id: string, name: string, description: string, services: Array<string>}>}
 	 */
 	async retrieveBuildingFromJson(id) {
-		const response = await fetch('buildings.json');
+		const response = await fetch('areas.json');
 		const json = await response.json();
-		const building = json.find(item => item.id === id);
+		const areas = json.find(item => item.id === id);
 
 		return {
-			id: building.id,
-			name: building.name,
-			description: building.description,
-			services: building.services,
+			id: areas.id,
+			name: areas.name,
+			description: areas.description,
+			services: areas.services,
 		}
 	}
 
