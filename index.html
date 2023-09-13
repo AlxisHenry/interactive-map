@@ -1,23 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple interactive map</title>
-    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./build/css/main.css">
+    <link rel="stylesheet" href="./build/css/utils.css">
 </head>
 
 <body>
+    <nav>
+        <h1>Interactive map</h1>
+        <!-- <div class="customize">
+            <button id="open">Customize your map</button>
+        </div> -->
+    </nav>
     <main>
         <img src="./assets/map.png" usemap="#map">
 
         <map name="map">
-            <!-- Insert here your area -->
-            <area target="" alt="" data-id="1" coords="691,433,475,301" shape="rect">
-            <area target="" alt="" data-id="2" coords="150,292,308,398" shape="rect">
-            <area target="" alt="" data-id="3" coords="208,36,325,148" shape="rect">
+            <!-- Paste your coordinates here
+                <area data-list="l1,l2,l3,l4..." data-id="1" data-title="Title" coords="289,238,612,404" shape="rect">    
+            -->
+            <area data-list="Premier élément,Second élément,Troisième élément,4ème élément" data-id="1" data-title="Test" coords="289,238,612,404" shape="rect">
         </map>
     </main>
-    <script type="module" src="./assets/js/main.js"></script>
+    <!-- <div class="customize-section hidden">
+        <div class="close-section">
+            <div class="callout" data-closable>
+                <span id="close" aria-hidden="true">&times;</span>
+            </div>
+        </div>
+        <div class="map">
+            <img src="./assets/map.png" alt="">
+        </div>
+        <div class="customisation">
+            <div class="title">
+                <h2>Customize map areas</h2>
+            </div>
+            <div class="areas">
+            </div>
+        </div>
+    </div> -->
+    <script defer type="module" src="./build/js/index.js"></script>
 </body>
 
 </html>

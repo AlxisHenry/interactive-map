@@ -1,0 +1,107 @@
+:root {
+	--highlight-opacity: 0.3;
+	--highlight-border-radius: 50%;
+	--highlight-box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+main {
+	width: 100vw;
+	height: calc(100vh - 50px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 75px;
+	background-color: #F2F2F2;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+nav .customize {
+	margin-right: 20px;
+}
+
+nav .customize button {
+	/* border: none; */
+	background-color: #F2F2F2;
+	color: #000;
+	font-size: 1rem;
+	font-weight: 500;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+nav .customize button:hover {
+	transition: all 0.5s ease;
+}
+
+.customize-section {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #F2F2F2;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+.customize-section .close-section {
+	position: absolute;
+	top: 0;
+	left: 12px;
+	font-size: 45px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.customize-section .close-section:hover {
+	transition: all 0.5s ease;
+	transform: scale(1.2);
+}
+
+.customize-section .map {
+	flex: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.customize-section .customisation {
+	flex: 1;
+	margin-left: 20px;
+	height: 100%;
+	border-left: 1px solid #000;
+	display: flex;
+	flex-direction: column;
+}
+
+.customize-section .customisation .title {
+	flex: .5;
+	display: flex;
+	align-items: center;
+	font-size: 1.5rem;
+	font-weight: 500;
+	font-family: 'Roboto', sans-serif;
+	justify-content: center;
+}
+
+.customize-section .customisation .areas {
+	flex: 3;
+	padding: 0 20px;
+}

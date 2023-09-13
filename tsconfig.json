@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "lib": ["es5", "es6", "dom", "ES2021"],
+    "preserveConstEnums": true,
+		"outDir": "build/js/",
+    "outFile": "build/js/index.js",
+  },
+  "include": ["src/*"],
+}
